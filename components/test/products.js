@@ -10,7 +10,48 @@ export const products = [
       image: PC2,
       name: 'Product 1',
       description: 'Description for Product 1',
-      price: 1000
+      price: 1000,
+      specs: [{
+        CPU: true,
+        Model: '7600X',
+        Nuclee: 8,
+        GHZ: 5.6
+      },
+    {
+        GPU: true,
+        Model: '4090X',
+        VRAM: '12GB',
+        GHZ: 5.6    },
+{
+    RAM: true,
+    Model: '5200 MHZ'
+}],
+performance: [
+    {
+        Game: 'Cyberpunk 2077',
+        Settings: [
+          { Quality: 'Low', FPS: '90' },
+          { Quality: 'Medium', FPS: '60' },
+          { Quality: 'High', FPS: '45' }
+        ]
+      },
+      {
+        Game: 'Red Dead Redemption 2',
+        Settings: [
+          { Quality: 'Low', FPS: '100' },
+          { Quality: 'Medium', FPS: '70' },
+          { Quality: 'High', FPS: '50' }
+        ]
+      },
+      {
+        Game: 'Call of Duty: Warzone',
+        Settings: [
+          { Quality: 'Low', FPS: '120' },
+          { Quality: 'Medium', FPS: '90' },
+          { Quality: 'High', FPS: '70' }
+        ]
+      }
+]
     },
     {
       id: 2,
