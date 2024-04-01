@@ -2,14 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CPU from '@/public/images/cpu2.jpeg'
 
-const ProductCard = () => {
-    const product = {
-        id: 1,
-        image: CPU,
-        name: 'hey',
-        description: 'nice',
-        price: 10
-    }
+const ProductCard = ({product }: any) => {
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Link href={`/product/${product.id}`}>

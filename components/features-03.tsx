@@ -81,7 +81,7 @@ export default function Features03() {
             </div>
 
             {/* Tabs items */}
-            <div className="relative lg:max-w-none pt-32 sm:pt-0">
+            <div className="relative lg:max-w-none pt-0 md:pt-32">
               <div className="relative flex flex-col" ref={tabs}>
                 {/* Item 1 */}
                 <Transition
@@ -136,7 +136,7 @@ export default function Features03() {
                 </Transition>
               </div>
               {/* Gear illustration */}
-              <Image className="absolute left-0 bottom-0 -translate-x-1/2 translate-y-1/3 mix-blend-exclusion max-lg:w-32 pt-96 sm:pt-16" src={FeatureIllustration} alt="Features 02 illustration" width={173} height={167} aria-hidden="true" />
+              <Image className="absolute left-0 bottom-0 -translate-x-1/2 translate-y-1/3 mix-blend-exclusion max-lg:w-32 pt-16 md:pt-96" src={FeatureIllustration} alt="Features 02 illustration" width={173} height={167} aria-hidden="true" />
             </div>
 
           </div>
