@@ -1,26 +1,39 @@
-import React from 'react';
+import React from "react";
 
-// Component to generate a table for a given object
-function ObjectTable({ obj }: any) {
-  const { Game, Settings } = obj;
+interface GameSettings {
+  Quality: string;
+  FPS: string;
+}
+
+interface Performance {
+  Game: string;
+  Settings: GameSettings[];
+}
+
+function ObjectTable({ obj }: { obj: Performance }): JSX.Element {
+  const { Game, Settings }: Performance = obj;
 
   return (
-    <div className='max-w-4xl px-10'>
+    <div className="max-w-4xl px-10">
       <table className="w-full text-sm text-left rtl:text-right dark:text-gray-600 border border-gray-300">
         <thead className="text-xs uppercase bg-gray-200 dark:bg-gray-300 dark:text-gray-600 border-b-2 border-gray-300">
           <tr>
-            <th colSpan={2} className="py-2 px-4">{Game}</th>
+            <th colSpan={2} className="py-2 px-4">
+              {Game}
+            </th>
           </tr>
         </thead>
         <tbody>
-          {Settings.map((setting: any, index: number) => (
+          {Settings.map((setting: GameSettings, index: number) => (
             <tr key={index}>
-              {Object.entries(setting).map(([key, value]: [string, string], subIndex: number) => (
-                <React.Fragment key={subIndex}>
-                  <td className="py-2 px-4">{key}</td>
-                  <td className="py-2 px-4">{value}</td>
-                </React.Fragment>
-              ))}
+              {Object.entries(setting).map(
+                ([key, value]: [string, string], subIndex: number) => (
+                  <React.Fragment key={subIndex}>
+                    <td className="py-2 px-4">{key}</td>
+                    <td className="py-2 px-4">{value}</td>
+                  </React.Fragment>
+                )
+              )}
             </tr>
           ))}
         </tbody>
@@ -46,10 +59,10 @@ function DisplayTables({ array }: any) {
 // App component
 function App({ specs }: any) {
   return (
-<div className='flex justify-center items-center h-full my-10'>
-  <div className="w-full max-w-xl">
- <DisplayTables array={specs} />
- </div>   
+    <div className="flex justify-center items-center h-full my-10">
+      <div className="w-full max-w-xl">
+        <DisplayTables array={specs} />
+      </div>
     </div>
   );
 }
