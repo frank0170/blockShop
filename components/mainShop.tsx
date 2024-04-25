@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/productCard";
-import { products } from "@/components/test/products";
+import { products } from "@/components/test/products2";
 import { useEffect, useState } from "react";
 
 export default function Shop() {
